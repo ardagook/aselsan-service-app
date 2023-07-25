@@ -15,7 +15,8 @@ public class BusStopService {
     public BusStopService(BusStopRepository busStopRepository) {
         this.busStopRepository = busStopRepository;
     }
-    public List<StopEntity> getBusStops(){
+
+    public List<StopEntity> getBusStops() {
         return busStopRepository.findAll();
     }
 }

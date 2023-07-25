@@ -9,13 +9,9 @@ import jakarta.persistence.Table;
 @Entity
 public class BusEntity {
     @Id
-    @Column(
-            name = "id",
-            updatable = false
-    )
+    @Column(name = "id", updatable = false)
     private int id;
-    @Column(name = "no",
-    nullable = false)
+    @Column(name = "no", nullable = false)
     private String no;
 
     public BusEntity(int id, String no) {
@@ -45,9 +41,6 @@ public class BusEntity {
 
     @Override
     public String toString() {
-        return "BusEntity{" +
-                "id=" + id +
-                ", no='" + no + '\'' +
-                '}';
+        return "BusEntity{" + "id=" + id + ", no='" + no + '\'' + '}';
     }
 }

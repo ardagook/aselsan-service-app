@@ -9,7 +9,7 @@ import static jakarta.persistence.GenerationType.SEQUENCE;
 public class StopEntity {
     @Id
     @SequenceGenerator(
-            name="stop_sequence",
+            name = "stop_sequence",
             sequenceName = "stop_sequence",
             allocationSize = 1
     )
@@ -26,7 +26,7 @@ public class StopEntity {
     )
     private int id;
     @Column(
-            name ="no",
+            name = "no",
             columnDefinition = "Text",
             updatable = false
     )
