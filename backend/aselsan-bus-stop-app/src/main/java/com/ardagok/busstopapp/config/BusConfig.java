@@ -10,12 +10,12 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BusConfig {
-@Bean
-    CommandLineRunner commandLineRunner(BusRepository busRepository, BusStopRepository busStopRepository){
-        return ags-> {
-            BusEntity incirli = new BusEntity(2,"289");
+    @Bean
+    CommandLineRunner commandLineRunner(BusRepository busRepository, BusStopRepository busStopRepository) {
+        return ags -> {
+            BusEntity incirli = new BusEntity(2, "289");
             busRepository.save(incirli);
-            BusEntity incirli2 = new BusEntity(3,"203");
+            BusEntity incirli2 = new BusEntity(3, "203");
             busRepository.save(incirli2);
             StopEntity durak1 = new StopEntity("285");
             busStopRepository.save(durak1);

@@ -23,7 +23,7 @@ public class BusService {
     public void addNewBus(BusEntity busEntity) {
 
         System.out.println(busEntity);
-
+        busRepository.save(busEntity);
     }
 }
 

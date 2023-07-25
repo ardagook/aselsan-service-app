@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import static jakarta.persistence.GenerationType.SEQUENCE;
 
 @Entity
-@Table()
+@Table(name = "stop_entity")
 public class StopEntity {
     @Id
     @SequenceGenerator(
