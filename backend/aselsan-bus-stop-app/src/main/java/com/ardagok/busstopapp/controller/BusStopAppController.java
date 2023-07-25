@@ -13,7 +13,7 @@ import java.util.List;
 public class BusStopAppController {
 
     @Autowired
-    public final BusStopService busStopService;
+    private final BusStopService busStopService;
 
     public BusStopAppController(BusStopService busStopService) {
         this.busStopService = busStopService;

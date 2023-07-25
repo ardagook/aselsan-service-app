@@ -21,7 +21,7 @@ public class BusStopService {
         return busStopRepository.findAll();
     }
 
-    @PostMapping
+
     public void addNewBusStops(StopEntity stopEntity) {
         busStopRepository.save(stopEntity);
     }

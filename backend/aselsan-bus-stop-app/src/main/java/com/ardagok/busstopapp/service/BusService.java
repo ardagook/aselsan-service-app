@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class BusService {
     @Autowired
-    final BusRepository busRepository;
+    private final BusRepository busRepository;
 
     public BusService(BusRepository busRepository) {
         this.busRepository = busRepository;
@@ -20,9 +20,9 @@ public class BusService {
         return busRepository.findAll();
     }
 
+
     public void addNewBus(BusEntity busEntity) {
 
-        System.out.println(busEntity);
         busRepository.save(busEntity);
     }
 }
