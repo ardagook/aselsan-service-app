@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BusConfig {
+
     @Bean
     CommandLineRunner commandLineRunner(BusRepository busRepository, BusStopRepository busStopRepository) {
         return ags -> {
