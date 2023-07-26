@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BusService {
@@ -24,6 +25,10 @@ public class BusService {
     public void addNewBus(BusEntity busEntity) {
 
         busRepository.save(busEntity);
+    }
+
+    public Optional<BusEntity> getBusById(long id) {
+        return busRepository.findById(id);
     }
 }
 

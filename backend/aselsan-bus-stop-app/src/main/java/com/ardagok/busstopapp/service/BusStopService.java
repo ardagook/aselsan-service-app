@@ -4,7 +4,6 @@ import com.ardagok.busstopapp.entity.StopEntity;
 import com.ardagok.busstopapp.repository.BusStopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
