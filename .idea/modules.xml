@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/backend/aselsan-bus-stop-app/aselsan-bus-stop-app.iml" filepath="$PROJECT_DIR$/backend/aselsan-bus-stop-app/aselsan-bus-stop-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/aselsan-service-app.iml" filepath="$PROJECT_DIR$/.idea/aselsan-service-app.iml" />
-    </modules>
-  </component>
-</project>
