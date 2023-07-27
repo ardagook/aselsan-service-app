@@ -1,23 +1,34 @@
 package com.ardagok.busstopapp.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import static jakarta.persistence.GenerationType.SEQUENCE;
+
 
 @Table(name = "bus_entity")
 @Entity
 public class BusEntity {
     @Id
+    @SequenceGenerator(
+            name = "bus_sequence",
+            sequenceName = "bus_sequence",
+            allocationSize = 1,
+            initialValue = 100
+    )
+    @GeneratedValue(
+            strategy = SEQUENCE,
+            generator = "bus_sequence"
+    )
     @Column(name = "id", updatable = false)
     private int id;
     @Column(name = "no", nullable = false)
     private String no;
 
-    public BusEntity(int id, String no) {
-        this.id = id;
+    public BusEntity(String no) {
+
         this.no = no;
     }
+
 
     public BusEntity() {
 
