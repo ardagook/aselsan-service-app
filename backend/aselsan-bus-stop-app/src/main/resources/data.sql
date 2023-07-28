@@ -1,12 +1,9 @@
 INSERT INTO stop_entity (id,no,stop_name,geometry) VALUES
-                                                       (nextval('stop_sequence'),'44','Durak2','POINT(-73.060316 48.432044)')
-
-        ,
-                                                       (nextval('stop_sequence'),'45','Durak2','1032.81722,21.2821'),
-                                                       (nextval('stop_sequence'),'47','Durak1','1310.81722,31.2821'),
-                                                       (nextval('stop_sequence'),'45','Durak2','112.81722,41.2821'),
-                                                       (nextval('stop_sequence'),'47','Durak1','100.81722,1.2821'),
-                                                       (nextval('stop_sequence'),'45','Durak2','122.81722,3.2821');
+                                                       (nextval('stop_sequence'),'44','Durak3','POINT(-71.060316 44.432044)'),
+                                                       (nextval('stop_sequence'),'44','Durak4','POINT(-72.060316 43.432044)'),
+                                                       (nextval('stop_sequence'),'44','Durak5','POINT(-74.060316 42.432044)'),
+                                                       (nextval('stop_sequence'),'44','Durak6','POINT(-75.060316 45.432044)'),
+                                                       (nextval('stop_sequence'),'44','Durak7','POINT(-76.060316 46.432044)');
 
 
 INSERT INTO bus_entity (id,no) VALUES
