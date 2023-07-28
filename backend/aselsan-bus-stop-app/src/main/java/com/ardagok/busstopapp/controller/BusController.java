@@ -10,18 +10,17 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api/buses")
-public class BusAppController {
+public class BusController {
     @Autowired
     public final BusService busService;
 
-    public BusAppController(BusService busService) {
+    public BusController(BusService busService) {
         this.busService = busService;
     }
 
     @GetMapping
     public List<BusEntity> getBuses() {
         return busService.getBuses();
-
     }
 
     @PostMapping

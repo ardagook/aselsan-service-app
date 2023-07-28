@@ -13,12 +13,12 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api/bus/stops", produces = "application/json")
-public class StopAppController {
+public class StopController {
 
     @Autowired
     private final StopService stopService;
 
-    public StopAppController(StopService stopService) {
+    public StopController(StopService stopService) {
         this.stopService = stopService;
     }
 

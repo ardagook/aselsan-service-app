@@ -1,19 +1,20 @@
 package com.ardagok.busstopapp.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
-@ToString
+
 @Table(name = "bus_entity")
 @Entity
 public class BusEntity {
@@ -27,7 +28,14 @@ public class BusEntity {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "busstops")
-    private List<StopEntity> route= new Array[2];
+    @ManyToMany
+    @JoinTable(
+            name = "bus_stops",
+            joinColumns = @JoinColumn(name="bus_id"),
+            inverseJoinColumns = @JoinColumn(name = "stop_id")
+    )
+
+
+    private Set<StopEntity> busStop;
 
 }
