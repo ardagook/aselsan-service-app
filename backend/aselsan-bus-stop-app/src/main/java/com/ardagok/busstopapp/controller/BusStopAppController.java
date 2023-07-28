@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "/api/bus/stops")
+@RequestMapping(path = "/api/bus/stops", produces = "application/json")
 public class BusStopAppController {
 
     @Autowired
