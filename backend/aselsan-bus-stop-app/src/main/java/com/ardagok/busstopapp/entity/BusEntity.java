@@ -4,43 +4,30 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+import java.lang.reflect.Array;
+import java.util.List;
+
+@Getter
+@Setter
+@ToString
 @Table(name = "bus_entity")
 @Entity
 public class BusEntity {
     @Id
-    @Column(name = "id", updatable = false)
+    @Column(name = "id")
     private int id;
-    @Column(name = "no", nullable = false)
+
+    @Column(name = "no")
     private String no;
 
-    public BusEntity(int id, String no) {
-        this.id = id;
-        this.no = no;
-    }
+    @Column(name = "name")
+    private String name;
 
-    public BusEntity() {
+    @Column(name = "busstops")
+    private List<StopEntity> route= new Array[2];
 
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNo() {
-        return no;
-    }
-
-    public void setNo(String no) {
-        this.no = no;
-    }
-
-    @Override
-    public String toString() {
-        return "BusEntity{" + "id=" + id + ", no='" + no + '\'' + '}';
-    }
 }

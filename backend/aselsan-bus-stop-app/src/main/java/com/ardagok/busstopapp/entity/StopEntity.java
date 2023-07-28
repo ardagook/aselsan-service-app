@@ -5,10 +5,15 @@ import com.bedatadriven.jackson.datatype.jts.serialization.GeometrySerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.locationtech.jts.geom.Point;
 
 import static jakarta.persistence.GenerationType.SEQUENCE;
-
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name = "stop_entity")
 public class StopEntity {
@@ -52,60 +57,6 @@ public class StopEntity {
     @Column(name = "geometry", columnDefinition = "Geometry")
     private Point point;
 
-    public Point getPoint() {
-        return point;
-    }
-
-    public void setPoint(Point point) {
-        this.point = point;
-    }
-
-    @Override
-    public String toString() {
-        return "StopEntity{" +
-                "id=" + id +
-                ", no='" + no + '\'' +
-                ", stopName='" + stopName + '\'' +
-                ", point=" + point+
-                '}';
-    }
-
-    public StopEntity(String no, String stopName, Point point) {
-
-        this.no = no;
-        this.stopName = stopName;
-        this.point= point;
-
-    }
-
-    public StopEntity() {
-
-
-    }
-
-    public String getStopName() {
-        return stopName;
-    }
-
-    public void setStopName(String stopName) {
-        this.stopName = stopName;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNo() {
-        return no;
-    }
-
-    public void setNo(String no) {
-        this.no = no;
-    }
 
 }
 
