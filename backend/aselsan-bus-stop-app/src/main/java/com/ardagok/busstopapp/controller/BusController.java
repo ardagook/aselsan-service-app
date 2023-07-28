@@ -5,6 +5,8 @@ import com.ardagok.busstopapp.service.BusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,6 +30,11 @@ public class BusController {
         busService.addNewBus(busEntity);
 
     }
+
+  /* @GetMapping(path = "/min")
+    public HashMap<String, LinkedList> getStopsMin() {
+        return busService.getStopsMin();
+    } */
 
     @GetMapping(path = "/{id}")
     public Optional<BusEntity> getBusById(@PathVariable Long id) {

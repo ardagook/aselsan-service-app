@@ -44,7 +44,7 @@ public class StopService {
             arrayList.add(entity.getStopName());
 
 
-            stopsMinHashMap.put(String.valueOf(entity.getId()),arrayList);
+            stopsMinHashMap.put(String.valueOf(entity.getNo()),arrayList);
 
         }
         return stopsMinHashMap;

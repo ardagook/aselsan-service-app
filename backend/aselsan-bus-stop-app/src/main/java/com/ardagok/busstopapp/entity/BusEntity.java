@@ -28,6 +28,14 @@ public class BusEntity {
     @Column(name = "name")
     private String name;
 
+    public Set<StopEntity> getBusStop() {
+        return busStop;
+    }
+
+    public void setBusStop(Set<StopEntity> busStop) {
+        this.busStop = busStop;
+    }
+
     @ManyToMany
     @JoinTable(
             name = "bus_stops",
