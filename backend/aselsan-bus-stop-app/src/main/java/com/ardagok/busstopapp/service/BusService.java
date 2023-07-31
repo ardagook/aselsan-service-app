@@ -6,7 +6,10 @@ import com.ardagok.busstopapp.repository.BusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BusService {
@@ -31,29 +34,32 @@ public class BusService {
         return busRepository.findById(id);
     }
 
-  /* public HashMap<String, LinkedList> getStopsMin() {
-        HashMap<String, LinkedList> busMinHashMap = new HashMap<>();
-        for (BusEntity entity : busRepository.findAll()){
 
-            LinkedList arrayList = new LinkedList();
-            arrayList.add(entity.getName());
-            Iterator<StopEntity> itr = entity.getBusStop().iterator();
-            while(itr.hasNext()){
-                itr.get
+    public HashMap<String, HashMap<String, Object>> getBusesMin() {
+        HashMap<String, HashMap<String, Object>> busMinHashMap = new HashMap<>();
+        for (BusEntity entity : busRepository.findAll()) {
+            HashMap<String, Object> busData = new HashMap<>();
+            busData.put("name", entity.getName());
+
+            List<String> stops = new LinkedList<>();
+            for (StopEntity entity2 : entity.getBusStop()) {
+                stops.add(entity2.getNo());
             }
-            arrayList.add((entity.getBusStop());
+            List<String> stops2 = new LinkedList<>();
+            for (StopEntity entity2 : entity.getBusStop()) {
+                stops2.add(entity2.getNo());
+            }
+            List<List<String>> allStops = new LinkedList<>();
+            allStops.add(stops);
 
-            busMinHashMap.put(String.valueOf(entity.getNo()),arrayList);
+            busData.put("routes", allStops);
 
+            busMinHashMap.put(String.valueOf(entity.getNo()), busData);
         }
         return busMinHashMap;
     }
-    public void busStopFormatter(){
-        for(BusEntity entity: busRepository.findAll() ){
+}
 
-        }
-*/
-    }
 
 
 
