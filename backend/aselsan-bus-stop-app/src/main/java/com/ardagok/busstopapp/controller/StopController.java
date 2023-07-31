@@ -11,6 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
 @RequestMapping(path = "/api/bus/stops", produces = "application/json")
 public class StopController {
@@ -29,7 +30,7 @@ public class StopController {
 
     @GetMapping(path = "/min")
     public HashMap<String, LinkedList> getStopsMin() {
-       return stopService.getStopsMin();
+        return stopService.getStopsMin();
     }
 
     @PostMapping

@@ -19,7 +19,7 @@ import static jakarta.persistence.GenerationType.SEQUENCE;
 
 @Entity
 @Table(name = "stop_entity")
-public class StopEntity {
+public class StopEntity implements Comparable<StopEntity> {
     @Id
     @SequenceGenerator(
             name = "stop_sequence",
@@ -62,12 +62,14 @@ public class StopEntity {
 
     @JsonBackReference
     @ManyToMany(mappedBy = "busStop")
+
     Set<BusEntity> busList;
 
-  /*  @JsonBackReference
-    @ManyToMany(mappedBy = "busStop2")
-    Set<BusEntity> busList2;
-*/
+    @Override
+    public int compareTo(StopEntity other) {
+
+        return this.getNo().compareTo(other.getNo());
+    }
 }
 
 

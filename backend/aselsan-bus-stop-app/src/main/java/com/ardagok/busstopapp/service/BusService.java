@@ -6,10 +6,7 @@ import com.ardagok.busstopapp.repository.BusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class BusService {
@@ -49,12 +46,13 @@ public class BusService {
             for (StopEntity entity2 : entity.getBusStop()) {
                 stops2.add(entity2.getNo());
             }
+            Collections.sort(stops);
             List<List<String>> allStops = new LinkedList<>();
             allStops.add(stops);
 
             busData.put("routes", allStops);
-
             busMinHashMap.put(String.valueOf(entity.getNo()), busData);
+
         }
         return busMinHashMap;
     }

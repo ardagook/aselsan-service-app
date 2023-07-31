@@ -39,15 +39,6 @@ public class BusEntity {
 
 
     private Set<StopEntity> busStop;
-  /*  @ManyToMany
-    @JoinTable(
-            name = "bus_stops_return",
-            joinColumns = @JoinColumn(name="bus_id"),
-            inverseJoinColumns = @JoinColumn(name = "stop_id")
-    )
 
-
-    private Set<StopEntity> busStop2;
-*/
 
 }
