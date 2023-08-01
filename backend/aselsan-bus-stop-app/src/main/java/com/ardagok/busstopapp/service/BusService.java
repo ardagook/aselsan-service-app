@@ -43,15 +43,19 @@ public class BusService {
                 stops.add(entity2.getNo());
             }
             List<String> stops2 = new LinkedList<>();
-            for (StopEntity entity2 : entity.getBusStop()) {
-                stops2.add(entity2.getNo());
+            for (StopEntity entity3 : entity.getBusStop2()) {
+                stops2.add(entity3.getNo());
             }
             Collections.sort(stops);
+            Collections.sort(stops2);
             List<List<String>> allStops = new LinkedList<>();
             allStops.add(stops);
+            allStops.add(stops2);
+            if(!allStops.get(0).isEmpty()){
+                busData.put("routes", allStops);
+                busMinHashMap.put(String.valueOf(entity.getNo()), busData);
+            }
 
-            busData.put("routes", allStops);
-            busMinHashMap.put(String.valueOf(entity.getNo()), busData);
 
         }
         return busMinHashMap;

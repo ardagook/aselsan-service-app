@@ -64,12 +64,17 @@ public class StopEntity implements Comparable<StopEntity> {
     @ManyToMany(mappedBy = "busStop")
 
     Set<BusEntity> busList;
+    @JsonBackReference
+    @ManyToMany(mappedBy = "busStop2")
+
+    Set<BusEntity> busList2;
 
     @Override
     public int compareTo(StopEntity other) {
 
         return this.getNo().compareTo(other.getNo());
     }
+
 }
 
 

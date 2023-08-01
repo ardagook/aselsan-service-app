@@ -40,5 +40,19 @@ public class BusEntity {
 
     private Set<StopEntity> busStop;
 
+    @ManyToMany
+    @JoinTable(
+            name = "bus_stops2",
+            joinColumns = @JoinColumn(name = "bus_id"),
+            inverseJoinColumns = @JoinColumn(name = "stop_id")
+    )
+
+
+    private Set<StopEntity> busStop2;
+
+    @OneToMany(mappedBy = "bus")
+    private Set<RouteEntity> routes;
+
+
 
 }
