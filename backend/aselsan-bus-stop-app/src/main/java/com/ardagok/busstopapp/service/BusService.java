@@ -1,8 +1,10 @@
 package com.ardagok.busstopapp.service;
 
 import com.ardagok.busstopapp.entity.BusEntity;
+import com.ardagok.busstopapp.entity.RouteEntity;
 import com.ardagok.busstopapp.entity.StopEntity;
 import com.ardagok.busstopapp.repository.BusRepository;
+import com.ardagok.busstopapp.util.MapBoxUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +15,12 @@ public class BusService {
     @Autowired
     private final BusRepository busRepository;
 
-    public BusService(BusRepository busRepository) {
+    @Autowired
+
+
+    public BusService(BusRepository busRepository  ) {
         this.busRepository = busRepository;
+
     }
 
     public List<BusEntity> getBuses() {
@@ -60,6 +66,23 @@ public class BusService {
         }
         return busMinHashMap;
     }
+    public HashMap<String, Object> getRoutesMin(){
+        HashMap<String,Object> routesMin = new HashMap<>();
+        for(BusEntity entity: busRepository.findAll()){
+            LinkedList<String> routes = new LinkedList();
+
+            for(RouteEntity entity2: entity.getRoutes()){
+
+                routes.add(MapBoxUtils.encode(List.of(entity2.getLineString().getCoordinates()), 5));
+
+            }
+            routesMin.put(entity.getNo(),routes);
+        }
+        return routesMin;
+    }
+
+
+
 }
 
 

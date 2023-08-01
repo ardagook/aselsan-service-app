@@ -35,6 +35,10 @@ public class BusController {
     public HashMap<String, HashMap<String, Object>> getBusesMin() {
         return busService.getBusesMin();
     }
+    @GetMapping(path = "/routes")
+    public HashMap<String, Object> getRoutesMin() {
+        return busService.getRoutesMin();
+    }
 
     @GetMapping(path = "/{id}")
     public Optional<BusEntity> getBusById(@PathVariable Long id) {

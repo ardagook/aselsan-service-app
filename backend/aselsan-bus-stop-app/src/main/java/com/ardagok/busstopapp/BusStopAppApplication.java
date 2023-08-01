@@ -8,6 +8,5 @@ public class BusStopAppApplication {
     public static void main(String[] args) {
         SpringApplication.run(BusStopAppApplication.class, args);
     }
-
 }
 

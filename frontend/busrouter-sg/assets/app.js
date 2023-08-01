@@ -37,7 +37,7 @@ import iconSVGPath from '../icons/icon.svg';
 import busTinyImagePath from './images/bus-tiny.png';
 
 const dataPath = 'http://localhost:8080/api/';
-//const routesJSONPath = dataPath + 'routes.min.json';
+const routesJSONPath = dataPath + 'routes';
 const stopsJSONPath =  dataPath+'bus/stops/min';
 const servicesJSONPath =  dataPath+'buses/min';
 
@@ -1247,7 +1247,7 @@ const App = () => {
 
     const fetchStopsP = fetchCache(stopsJSONPath);
     const fetchServicesP =fetchCache(servicesJSONPath);
-    //const fetchRoutesP = fetchCache(routesJSONPath, CACHE_TIME);
+    const fetchRoutesP = fetchCache(routesJSONPath, CACHE_TIME);
 
     // Init data
 
@@ -1301,7 +1301,7 @@ const App = () => {
     });
     servicesDataArr.sort((a, b) => sortServices(a.number, b.number));
 
-    //routesData = await fetchRoutesP;
+    routesData = await fetchRoutesP;
 
     setServices(servicesDataArr);
 
@@ -1309,7 +1309,7 @@ const App = () => {
       servicesData,
       stopsData,
       stopsDataArr,
-      //routesData,
+      routesData,
       servicesDataArr,
     };
 
