@@ -62,29 +62,8 @@ export default function About() {
             .
           </Trans>
         </p>
-        <p>
-          <Trans i18nKey="about.sisterSites">
-            Sister sites:
-            <a href="https://railrouter.sg/" target="_blank" rel="noopener">
-              🚆 RailRouter SG
-            </a>{' '}
-            <a href="https://taxirouter.sg/" target="_blank" rel="noopener">
-              🚖 TaxiRouter SG
-            </a>
-          </Trans>
-        </p>
-        <p>
-          <a
-            class="donation-box"
-            href="https://www.buymeacoffee.com/cheeaun"
-            target="_blank"
-            rel="noopener"
-          >
-            {t('about.liking')}
-            <br />
-            {t('about.treatCoffee')}
-          </a>
-        </p>
+
+       
         <div class="popover-buttons">
           <button
             class="popover-button"

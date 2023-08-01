@@ -36,10 +36,10 @@ import passingRoutesBlueImagePath from './images/passing-routes-blue.svg';
 import iconSVGPath from '../icons/icon.svg';
 import busTinyImagePath from './images/bus-tiny.png';
 
-const dataPath = 'https://data.busrouter.sg/v1/';
-const routesJSONPath = dataPath + 'routes.min.json';
-const stopsJSONPath = dataPath + 'stops.min.json';
-const servicesJSONPath = dataPath + 'services.min.json';
+const dataPath = 'http://localhost:8080/api/';
+//const routesJSONPath = dataPath + 'routes.min.json';
+const stopsJSONPath =  dataPath+'bus/stops/min';
+const servicesJSONPath =  dataPath+'buses/min';
 
 const $map = document.getElementById('map');
 const STORE = {};
@@ -58,9 +58,9 @@ const $logo = document.getElementById('logo');
 
 const redirectToOldSite = () => {
   const redirect = confirm(
-    'Looks like your browser is a little old. Redirecting you to the older version of BusRouter SG.',
+    'Sanırım senin uygulaman farklı bir versiyona yönlendirdi.',
   );
-  if (redirect) location.href = 'https://v1.busrouter.sg/';
+  if (redirect) location.href = 'https://localhost:8080/api';
 };
 
 if (!supportsPromise || !mapboxgl.supported()) {
@@ -1245,9 +1245,9 @@ const App = () => {
       renderRoute();
     };
 
-    const fetchStopsP = fetchCache(stopsJSONPath, CACHE_TIME);
-    const fetchServicesP = fetchCache(servicesJSONPath, CACHE_TIME);
-    const fetchRoutesP = fetchCache(routesJSONPath, CACHE_TIME);
+    const fetchStopsP = fetchCache(stopsJSONPath);
+    const fetchServicesP =fetchCache(servicesJSONPath);
+    //const fetchRoutesP = fetchCache(routesJSONPath, CACHE_TIME);
 
     // Init data
 

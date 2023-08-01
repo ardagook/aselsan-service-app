@@ -4,7 +4,7 @@ export default function BetweenRoutes(props) {
   const { results, nearbyStart, nearbyEnd, onClickRoute } = props;
   if (!results.length) {
     return (
-      <div class="between-block between-nada">😔 No routes available.</div>
+      <div class="between-block between-nada">😔 Güzergah bulunamadı.</div>
     );
   }
   return (

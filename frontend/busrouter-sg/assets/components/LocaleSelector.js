@@ -12,7 +12,9 @@ export default function LocaleSelector() {
           i18n.changeLanguage(lang);
         }}
         defaultValue={i18n.resolvedLanguage}
+        
       >
+        <option value="tr">Türkçe</option>
         <option value="en">English</option>
         <option value="zh" lang="zh">
           中文

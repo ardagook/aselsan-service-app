@@ -1,0 +1,84 @@
+{
+    "common": {
+      "cancel": "Vazgeç",
+      "live": "Canlı"
+    },
+    "glossary": {
+      "busArrivals": "Otobüs seferleri",
+      "passingRoutes": "Geçtiği güzergah",
+      "popOut": "Pop out",
+      "seatsAvailable": "Koltuklar Boş",
+      "standingAvailable": "Ayakta gidilebilir",
+      "limitedStanding": "Sınırlı süreli",
+      "arriving": "VArış",
+      "arrivingMinutes": "{{count}}dk",
+      "arrivingMinutes_plural": "{{count}}dk",
+      "multiRouteMode": "Çok-güzergah modu",
+      "nRoutes": "{{count}} rota",
+      "nRoutes_plural": "{{count}} rota",
+      "nStops": "{{count}} durak",
+      "nStops_plural": "{{count}} durak",
+      "nServices": "{{count}} servis",
+      "nServices_plural": "{{count}} servis",
+      "weekdaysShort": "WD",
+      "weekdays": "Hafta İçi",
+      "saturdaysShort": "Cts",
+      "saturdays": "Hafta Sonları",
+      "sundaysPublicHolidaysShort": "Pazar",
+      "sundaysPublicHolidays": "Pazar & Bayramlar",
+      "service": "Servis",
+      "firstBus": "İlk Servis",
+      "lastBus": "Son Servis"
+    },
+    "app": {
+      "name": "Aselsan Servis",
+      "title": "$t(app.name)",
+      "shortDescription": "Aselsan Servis Rotası Bulucu",
+      "description": "Aselsandaki servisleri, servislerin güzergahlarını, geçtiği durakları harita üzerinde görmeye yarayan bir uygulamadır.  "
+    },
+    "about": {
+      "disclaimerCopyright": "<0>Built</0> & <2>visualized</2> by <4>@cheeaun</4>. Data <6>© LTA</6>.",
+      "explore": "Hadi keşfedelim"
+    },
+    "search": {
+      "placeholder": "Durak/Otobüs ara"
+    },
+    "service": {
+      "title": "Otobüs {{serviceNumber}}: {{serviceName}} - $t(app.name)",
+      "titleMultiple": "Otobüsler: {{serviceNumbersNames}} - $t(app.name)",
+      "oppositeLegend": "Servislerinin ters güzergahındaki otobüs durakları"
+    },
+    "stop": {
+      "title": " Durak {{stopNumber}}: {{stopName}} - $t(app.name)",
+      "titleRoutes": "Otobüsün geçtiği duraklar {{stopNumber}}: {{stopName}} - $t(app.name)",
+      "firstLastBus": "İlk/Son sefer",
+      "multipleDirectionsWarning": "Bazı servisler çok yönlüdür. Detaylar için otobüs varışı açın .",
+      "liveBusTrack": "{{count}} tane otobüs seferde",
+      "liveBusTrack_plural": "{{count}} tane otobüs seferde."
+    },
+    "passingRoutes": {
+      "passingRoutes": "{{count}} güzergah",
+      "passingRoutes_plural": "{{count}} güzergah "
+    },
+    "multiRoute": {
+      "addRoute": "Add another bus route",
+      "showingServices": "Showing {{count}} service",
+      "showingServices_plural": "Showing {{count}} services",
+      "intersectingStops": "{{count}} intersecting stop",
+      "intersectingStops_plural": "{{count}} intersecting stops"
+    },
+    "arrivals": {
+      "invalidBusStopCode": "Yanlış numaralı servis durağı.",
+      "preHeading": "Servis varış zamanı ",
+      "title": "Servis varış zamanı",
+      "titleStop": " {{stopNumber}} - {{stopName}} için servis varış zamanı",
+      "multipleVisitsLegend": "1st or 2nd visit. Bus stops here twice, going in different directions. Check destination before boarding.",
+      "wheelchairDisclaimer": "<0/> All public buses in revenue service are <2>wheelchair-accessible</2>. The ones that are not accesssible will be marked with this icon <4/>"
+    },
+    "firstLast": {
+      "title": "Servislerin ilk ve son seferlerinin başlama zamanları {{stopNumber}}: {{stopName}}",
+      "busStopCodeNotFound": "Servis durak numarası bulunamadı.",
+      "preHeading": "Otobüsün ilk ve son seferlerinin yaklaşık varma zamanı"
+    }
+  }
+  

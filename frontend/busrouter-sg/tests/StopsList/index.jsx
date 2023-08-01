@@ -19,7 +19,7 @@ function App() {
     };
 
     useEffect(() => {
-      fetch('https://data.busrouter.sg/v1/stops.min.json')
+      fetch('http://localhost:8080/api/bus/stops/min')
         .then((d) => d.json())
         .then((d) => {
           const data = {};
@@ -28,7 +28,7 @@ function App() {
           });
           setStopsData(data);
         });
-      fetch('https://data.busrouter.sg/v1/services.min.json')
+      fetch('http://localhost:8080/api/buses/min')
         .then((d) => d.json())
         .then((d) => setServicesData(d));
     }, []);

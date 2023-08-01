@@ -18,8 +18,8 @@ import busSingleImagePath from './images/bus-single.svg';
 import busDoubleImagePath from './images/bus-double.svg';
 import busBendyImagePath from './images/bus-bendy.svg';
 
-const dataPath = 'https://data.busrouter.sg/v1/';
-const stopsJSONPath = dataPath + 'stops.min.json';
+const dataPath = 'http://localhost:8080/api/';
+const stopsJSONPath =  dataPath+ 'bus/stops/min';
 
 const BUSES = {
   sd: {

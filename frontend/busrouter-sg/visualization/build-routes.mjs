@@ -5,7 +5,7 @@ import got from 'got';
 const ruler = new CheapRuler(1.3);
 
 const { body: stopsMin } = await got(
-  'https://data.busrouter.sg/v1/stops.min.json',
+  'http://localhost:8080/api/bus/stops/min',
   {
     responseType: 'json',
   },
@@ -30,7 +30,7 @@ const { body: routesGeoJSON } = await got(
 // const routesGeoJSON = JSON.parse(fs.readFileSync('data/3/routes.geojson'));
 const { features: routes } = routesGeoJSON;
 const { body: serviceStops } = await got(
-  'https://data.busrouter.sg/v1/services.min.json',
+  'http://localhost:8080/api/buses/min',
   {
     responseType: 'json',
   },
