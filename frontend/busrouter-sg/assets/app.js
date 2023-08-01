@@ -37,7 +37,7 @@ import iconSVGPath from '../icons/icon.svg';
 import busTinyImagePath from './images/bus-tiny.png';
 
 const dataPath = 'http://localhost:8080/api/';
-const routesJSONPath = dataPath + 'routes';
+const routesJSONPath = dataPath + 'buses/routes';
 const stopsJSONPath =  dataPath+'bus/stops/min';
 const servicesJSONPath =  dataPath+'buses/min';
 
