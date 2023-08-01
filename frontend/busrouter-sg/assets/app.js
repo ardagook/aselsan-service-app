@@ -1301,7 +1301,7 @@ const App = () => {
     });
     servicesDataArr.sort((a, b) => sortServices(a.number, b.number));
 
-    routesData = await fetchRoutesP;
+    //routesData = await fetchRoutesP;
 
     setServices(servicesDataArr);
 
@@ -1309,7 +1309,7 @@ const App = () => {
       servicesData,
       stopsData,
       stopsDataArr,
-      routesData,
+      //routesData,
       servicesDataArr,
     };
 
