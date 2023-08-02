@@ -5,7 +5,7 @@
     },
     "glossary": {
       "busArrivals": "Otobüs seferleri",
-      "passingRoutes": "Geçtiği güzergah",
+      "passingRoutes": "Durağından geçen servisler",
       "popOut": "Pop out",
       "seatsAvailable": "Koltuklar Boş",
       "standingAvailable": "Ayakta gidilebilir",
@@ -13,7 +13,7 @@
       "arriving": "VArış",
       "arrivingMinutes": "{{count}}dk",
       "arrivingMinutes_plural": "{{count}}dk",
-      "multiRouteMode": "Çok-güzergah modu",
+      "multiRouteMode": "Çok-Otobüs modu",
       "nRoutes": "{{count}} rota",
       "nRoutes_plural": "{{count}} rota",
       "nStops": "{{count}} durak",
@@ -57,8 +57,8 @@
       "liveBusTrack_plural": "{{count}} tane otobüs seferde."
     },
     "passingRoutes": {
-      "passingRoutes": "{{count}} güzergah",
-      "passingRoutes_plural": "{{count}} güzergah "
+      "passingRoutes": "{{count}} Otobüs",
+      "passingRoutes_plural": "{{count}} Otobüs "
     },
     "multiRoute": {
       "addRoute": "Add another bus route",

@@ -43,7 +43,7 @@ public class StopEntity implements Comparable<StopEntity> {
     @Column(
             name = "no",
             columnDefinition = "Text",
-            updatable = false
+            unique = true
     )
     private String no;
 

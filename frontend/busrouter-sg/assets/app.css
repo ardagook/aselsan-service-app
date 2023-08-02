@@ -746,7 +746,7 @@ a:active {
   margin-right: 1em;
 }
 .popover-list li a.current {
-  background-color: #dbefb7;
+  background-color: #01074b;
   pointer-events: none;
 }
 
@@ -1028,8 +1028,8 @@ span.legend-opposite {
   padding: 3px 7px;
   border: 2px solid #fff;
   border-radius: 5px;
-  background-color: #55dd3333;
-  color: #3a6727;
+  background-color: rgba(110, 184, 216, 0.525);
+  color: #1a5dfa;
   font-weight: 500;
   text-decoration: none;
   overflow: hidden;
@@ -1055,7 +1055,7 @@ a.service-tag:hover {
 }
 @keyframes currenting {
   0% {
-    border-color: #729e1f;
+    border-color: #80d1ef;
   }
   100% {
     border: 2px solid #fff;
@@ -1411,7 +1411,7 @@ a.service-tag:hover {
   }
   #search-popover .sidebar-ads {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    display: block;
+    display: none;
   }
 
   .plus {
@@ -1655,7 +1655,7 @@ a.service-tag:hover {
   display: inline-block;
   border: 2px solid #fff;
   border-radius: 999px;
-  background-color: #55dd3333;
+  background-color: #2c8ac9;
   font-weight: bold;
   text-decoration: none;
   overflow: hidden;
@@ -1675,7 +1675,7 @@ a.service-tag:hover {
   content: '';
   display: block;
   position: absolute;
-  background-color: #3a6727;
+  background-color: #325ab3;
   border-radius: 2px;
   transition: transform 0.3s ease-in-out;
 }
@@ -1692,7 +1692,7 @@ a.service-tag:hover {
   left: 4px;
 }
 .plus:hover {
-  border-color: #3a6727;
+  border-color: #3070d1;
 }
 .plus:hover:before,
 .plus:hover:after {
@@ -1734,7 +1734,7 @@ a.service-tag:hover {
   display: inline-block;
   text-align: right;
   font-weight: 500;
-  color: #3a6727;
+  color: #01c0ff;
   text-shadow: 0 0 2px #eeffd1;
   word-spacing: 0.5em;
   margin-left: 8px;
@@ -1759,17 +1759,17 @@ input[type='checkbox']:before {
   width: 24px;
   height: 24px;
   border-radius: 24px;
-  border: 2px solid #3a672766;
-  background-color: #e0f9d9;
+  border: 2px solid #9bc1ee;
+  background-color: #d9f0f9;
   transition: 0.1s all ease-in-out;
   backdrop-filter: blur(10px);
 }
 input[type='checkbox']:active:before {
-  background-color: #c2dabc;
+  background-color: #9bc1ee;
 }
 input[type='checkbox']:hover:before,
 input[type='checkbox']:checked:before {
-  border-color: #3a6727;
+  border-color: #23c3f4;
 }
 input[type='checkbox']:after {
   opacity: 0;
@@ -1777,7 +1777,7 @@ input[type='checkbox']:after {
   position: absolute;
   top: 6px;
   left: 9px;
-  border: solid #3a6727;
+  border: solid #1883a4;
   border-width: 0 2px 2px 0;
   width: 6px;
   height: 10px;

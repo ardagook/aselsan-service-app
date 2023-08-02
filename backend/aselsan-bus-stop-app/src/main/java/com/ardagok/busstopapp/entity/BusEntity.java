@@ -18,7 +18,7 @@ public class BusEntity {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "no")
+    @Column(name = "no",unique = true)
     private String no;
 
     @Column(name = "name")
