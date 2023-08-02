@@ -1518,7 +1518,7 @@ const App = () => {
         'text-line-height': 1.1,
       },
       paint: {
-        'text-color': '#f01b48',
+        'text-color': '#1b2df0',
         'text-halo-width': 1,
         'text-halo-color': '#fff',
       },
@@ -1553,12 +1553,12 @@ const App = () => {
             'case',
             ['boolean', ['feature-state', 'selected'], false],
             '#fff',
-            '#f01b48',
+            '#1b2df0',
           ],
           'circle-stroke-color': [
             'case',
             ['boolean', ['feature-state', 'selected'], false],
-            '#f01b48',
+            '#1b2df0',
             '#fff',
           ],
           'circle-stroke-width': [
@@ -1689,7 +1689,7 @@ const App = () => {
       paint: {
         'circle-radius': ['step', ['zoom'], 1.5, 12, 2],
         'circle-color': '#fff',
-        'circle-stroke-color': '#f01b48',
+        'circle-stroke-color': '#1b2df0',
         'circle-stroke-width': ['step', ['zoom'], 1.5, 12, 2],
       },
     });
@@ -1798,7 +1798,7 @@ const App = () => {
             ],
           ],
           'circle-color': '#fff',
-          'circle-stroke-color': '#f01b48',
+          'circle-stroke-color': '#1b2df0',
           'circle-stroke-width': 5,
           'circle-opacity': [
             'case',
@@ -1847,17 +1847,17 @@ const App = () => {
           'line-cap': 'round',
         },
         paint: {
-          'line-color': '#f01b48',
+          'line-color': '#1b2df0',
           'line-gradient': [
             'interpolate',
             ['linear'],
             ['line-progress'],
             0,
-            '#f01b48',
+            '#1b2df0',
             0.5,
             '#972FFE',
             1,
-            '#f01b48',
+            '#1b2df0',
           ],
           'line-opacity': [
             'interpolate',
@@ -1982,17 +1982,17 @@ const App = () => {
           'line-cap': 'round',
         },
         paint: {
-          'line-color': '#f01b48',
+          'line-color': '#1b2df0',
           'line-gradient': [
             'interpolate',
             ['linear'],
             ['line-progress'],
             0,
-            '#f01b48',
+            '#1b2df0',
             0.5,
             '#972FFE',
             1,
-            '#f01b48',
+            '#1b2df0',
           ],
           'line-opacity': [
             'case',
@@ -2300,10 +2300,10 @@ const App = () => {
             'match',
             ['get', 'type'],
             'start',
-            '#f01b48',
+            '#1b2df0',
             'end',
             '#972FFE',
-            '#f01b48',
+            '#1b2df0',
           ],
           'line-opacity': 0.7,
           'line-width': [

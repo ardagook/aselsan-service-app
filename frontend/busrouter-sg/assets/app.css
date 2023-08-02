@@ -449,14 +449,14 @@ a:active {
   padding-right: 2em;
   padding-bottom: 2px;
   left: 5px;
-  background-image: linear-gradient(to left, transparent 0%, #f01b48 30%);
+  background-image: linear-gradient(to left, transparent 0%, #1b2df0 30%);
 }
 #between-popover .between-services.full .start {
   width: auto;
   right: 5px;
 }
 #between-popover .between-services.full .start {
-  background-image: linear-gradient(to left, #972ffe, #f01b48);
+  background-image: linear-gradient(to left, #972ffe, #1b2df0);
   padding-right: 0;
 }
 #between-popover .between-services .end {
@@ -502,7 +502,7 @@ a:active {
   background-color: #fff;
 }
 #between-popover .between-stops:before {
-  border-color: #f01b48;
+  border-color: #1b2df0;
   margin-right: 24px;
 }
 #between-popover .between-stops:after {
@@ -529,13 +529,13 @@ a:active {
   width: 10px;
   height: 10px;
   border: 3px solid;
-  border-color: #f01b48 #972ffe #972ffe #f01b48;
+  border-color: #1b2df0 #972ffe #972ffe #1b2df0;
   background-color: #fff;
   border-radius: 100px;
 }
 #between-popover .nearby-start .between-stops .start:before {
   margin-top: 1px;
-  border-color: #f01b48;
+  border-color: #1b2df0;
 }
 #between-popover .nearby-end .between-stops .end:before {
   margin-left: auto;
@@ -559,7 +559,7 @@ a:active {
   width: 10px;
   height: 10px;
   border: 3px solid;
-  border-color: #f01b48 #972ffe #972ffe #f01b48;
+  border-color: #1b2df0 #972ffe #972ffe #1b2df0;
   background-color: #fff;
   border-radius: 100px;
 }
@@ -746,7 +746,7 @@ a:active {
   margin-right: 1em;
 }
 .popover-list li a.current {
-  background-color: #01074b;
+  background-color: #5369b8;
   pointer-events: none;
 }
 
@@ -790,8 +790,8 @@ a:active {
     circle at bottom center,
     transparent,
     transparent 11px,
-    #f01b48 11px,
-    #f01b48 13px,
+    #1b2df0 11px,
+    #1b2df0 13px,
     transparent 13px
   );
 }
@@ -802,8 +802,8 @@ a:active {
     circle at top center,
     transparent,
     transparent 11px,
-    #f01b48 11px,
-    #f01b48 13px,
+    #1b2df0 11px,
+    #1b2df0 13px,
     transparent 13px
   );
 }
@@ -814,7 +814,7 @@ a:active {
 .stops-table td.stop,
 .stops-table td.empty {
   position: relative;
-  background: linear-gradient(#f01b48, #f01b48) no-repeat 4px 0;
+  background: linear-gradient(#1b2df0, #1b2df0) no-repeat 4px 0;
   background-size: 2px 100%;
 }
 .stops-table td.stop {
@@ -858,7 +858,7 @@ a:active {
   position: absolute;
   width: 10px;
   height: 10px;
-  border: 2px solid #f01b48;
+  border: 2px solid #1b2df0;
   background-color: #fff;
   border-radius: 999px;
 }
@@ -892,8 +892,8 @@ a:active {
   left: 1px;
   width: 8px;
   height: 8px;
-  border-bottom: 2px solid #f01b48;
-  border-right: 2px solid #f01b48;
+  border-bottom: 2px solid #1b2df0;
+  border-right: 2px solid #1b2df0;
   transform: rotate(45deg);
   opacity: 0.5;
 }
@@ -941,21 +941,21 @@ a:active {
 .stops-table td.stop a:hover,
 .stops-table td.stop-start a:hover,
 .stops-table td.stop-end a:hover {
-  background-color: #f01b4822;
+  background-color: #1b2df022;
 }
 .stops-list li a.flash,
 .stops-table td.stop a.flash,
 .stops-table td.stop-start a.flash,
 .stops-table td.stop-end a.flash {
-  background-color: #f01b4822;
+  background-color: #1b2df022;
   animation: flash 1s both ease-in;
 }
 @keyframes flash {
   75% {
-    background-color: #f01b4822;
+    background-color: #1b2df022;
   }
   100% {
-    background-color: #f01b4800;
+    background-color: #1b2df000;
   }
 }
 .stops-table td.stop-start a {
@@ -998,12 +998,12 @@ span.legend-opposite {
 
 .stops-table td.same {
   background: linear-gradient(
-      #f01b4866,
-      #f01b4866 2px,
+      #1b2df066,
+      #1b2df066 2px,
       #ffff 2px,
       #ffff 4px,
-      #f01b4866 4px,
-      #f01b4866
+      #1b2df066 4px,
+      #1b2df066
     )
     center no-repeat;
   background-size: 10px 6px;
@@ -1074,15 +1074,15 @@ a.service-tag:hover {
   color: #999;
 }
 .service-tag span.close:hover {
-  color: #f01b48;
+  color: #1b2df0;
 }
 
 .stop-tag {
   display: inline-block;
   padding: 2px 5px;
   border-radius: 4px;
-  background-color: #f01b4822;
-  color: #f01b48;
+  background-color: #1b2df022;
+  color: #1b2df0;
   flex-shrink: 0;
   font-variant-numeric: tabular-nums;
   font-size: 12px;
@@ -1090,7 +1090,7 @@ a.service-tag:hover {
 }
 .mini-stop-tag {
   display: inline-block;
-  color: #f01b48;
+  color: #1b2df0;
   font-size: 10px;
   font-variant-numeric: tabular-nums;
   font-weight: 500;
@@ -1230,7 +1230,7 @@ a.service-tag:hover {
   display: block;
   padding: 11px 9px;
   text-align: center;
-  background-color: #007aff22;
+  background-color: #eff1f4;
   color: #007aff;
   font-size: 14px;
   border-radius: 7px;
@@ -1655,7 +1655,7 @@ a.service-tag:hover {
   display: inline-block;
   border: 2px solid #fff;
   border-radius: 999px;
-  background-color: #2c8ac9;
+  background-color: rgba(110, 184, 216, 0.525);
   font-weight: bold;
   text-decoration: none;
   overflow: hidden;
@@ -1675,7 +1675,7 @@ a.service-tag:hover {
   content: '';
   display: block;
   position: absolute;
-  background-color: #325ab3;
+  background-color: #1a5dfa;
   border-radius: 2px;
   transition: transform 0.3s ease-in-out;
 }
@@ -1692,7 +1692,7 @@ a.service-tag:hover {
   left: 4px;
 }
 .plus:hover {
-  border-color: #3070d1;
+  border-color: #1a5dfa;
 }
 .plus:hover:before,
 .plus:hover:after {
@@ -1722,7 +1722,7 @@ a.service-tag:hover {
   display: flex;
 }
 .simple-stops-list li a:hover {
-  background-color: #f01b4822;
+  background-color: #1b2df022;
 }
 .simple-stops-list .stop-tag {
   font-weight: normal;
@@ -1734,7 +1734,7 @@ a.service-tag:hover {
   display: inline-block;
   text-align: right;
   font-weight: 500;
-  color: #01c0ff;
+  color: #1a5dfa;
   text-shadow: 0 0 2px #eeffd1;
   word-spacing: 0.5em;
   margin-left: 8px;
@@ -1769,7 +1769,7 @@ input[type='checkbox']:active:before {
 }
 input[type='checkbox']:hover:before,
 input[type='checkbox']:checked:before {
-  border-color: #23c3f4;
+  border-color: #1a5dfa;
 }
 input[type='checkbox']:after {
   opacity: 0;
@@ -1777,7 +1777,7 @@ input[type='checkbox']:after {
   position: absolute;
   top: 6px;
   left: 9px;
-  border: solid #1883a4;
+  border: solid #1a5dfa;
   border-width: 0 2px 2px 0;
   width: 6px;
   height: 10px;
