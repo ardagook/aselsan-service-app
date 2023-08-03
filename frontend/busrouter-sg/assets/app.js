@@ -494,13 +494,13 @@ const App = () => {
       const top = ((screen.availHeight || screen.height) - height) / 2;
       const left = (screen.width - width) / 2;
       window.open(
-        
+        url,
         `busArrivals-${stopNumber}`,
         `width=${width},height=${height},menubar=0,toolbar=0,top=${top},left=${left}`,
       );
     } else {
       setShowArrivalsPopover({
-     
+        webviewURL,
         number: stopNumber,
       });
       $map.classList.add('fade-out');
@@ -2724,8 +2724,8 @@ const App = () => {
             ref={servicesList}
             onScroll={handleServicesScroll}
           >
-          <li className="ads-li" hidden={!services.length || !showAd}>
-           {showAd ? <Ad key="ad" /> : <img src="icons\128x128.png" alt="aselsan" />}
+             <li class="ads-li" hidden={!services.length || !showAd}>
+              {showAd && <Ad key="ad" />}
             </li>
             {services.length
               ? (expandedSearchOnce ? services : services.slice(0, 25)).map(
@@ -2801,9 +2801,7 @@ const App = () => {
               <li class="nada">No results.</li>
             )}
           </ul>
-          <div class="image-container">
-            <img src='128x128.png' alt="Your Image" />
-              </div>
+    
 
 
           <div class="sidebar-ads" hidden={!showAd}>

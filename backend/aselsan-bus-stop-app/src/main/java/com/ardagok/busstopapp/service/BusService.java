@@ -48,6 +48,7 @@ public class BusService {
             }
             Collections.sort(stops);
             Collections.sort(stops2);
+            Collections.reverse(stops2);
             List<List<String>> allStops = new LinkedList<>();
             allStops.add(stops);
             allStops.add(stops2);

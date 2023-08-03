@@ -73,6 +73,9 @@ public class StopEntity implements Comparable<StopEntity> {
     public int compareTo(StopEntity other) {
         return this.getNo().compareTo(other.getNo());
     }
+    public int compareTo2(StopEntity other) {
+        return -this.getNo().compareTo(other.getNo());
+    }
 }
 
 

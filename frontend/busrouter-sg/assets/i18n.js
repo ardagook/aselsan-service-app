@@ -15,6 +15,10 @@ i18n
     resources: {
       tr: { translation: tr },
       en: { translation: en },
+      ms: { translation: ms },
+      zh: { translation: zh },
+      ta: { translation: ta },
+      ja: { translation: ja },
 
     },
     fallbackLng: 'tr',
