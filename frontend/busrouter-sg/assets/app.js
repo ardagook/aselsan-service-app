@@ -494,13 +494,13 @@ const App = () => {
       const top = ((screen.availHeight || screen.height) - height) / 2;
       const left = (screen.width - width) / 2;
       window.open(
-        url,
+        
         `busArrivals-${stopNumber}`,
         `width=${width},height=${height},menubar=0,toolbar=0,top=${top},left=${left}`,
       );
     } else {
       setShowArrivalsPopover({
-        webviewURL: url,
+     
         number: stopNumber,
       });
       $map.classList.add('fade-out');
@@ -512,7 +512,7 @@ const App = () => {
     setShowArrivalsPopover(false);
     $map.classList.remove('fade-out');
   };
-
+ 
   const _showBetweenPopover = (data) => {
     setShrinkSearch(true);
     setShowBetweenPopover(data);
@@ -2724,8 +2724,8 @@ const App = () => {
             ref={servicesList}
             onScroll={handleServicesScroll}
           >
-            <li class="ads-li" hidden={!services.length || !showAd}>
-              {showAd && <Ad key="ad" />}
+          <li className="ads-li" hidden={!services.length || !showAd}>
+           {showAd ? <Ad key="ad" /> : <img src="icons\128x128.png" alt="aselsan" />}
             </li>
             {services.length
               ? (expandedSearchOnce ? services : services.slice(0, 25)).map(
@@ -2801,6 +2801,11 @@ const App = () => {
               <li class="nada">No results.</li>
             )}
           </ul>
+          <div class="image-container">
+            <img src='128x128.png' alt="Your Image" />
+              </div>
+
+
           <div class="sidebar-ads" hidden={!showAd}>
             {showAd && <Ad key="ad2" />}
           </div>
@@ -2828,19 +2833,7 @@ const App = () => {
                   count: stopPopoverData.services.length,
                 })}{' '}
                 ∙{' '}
-                <a
-                  href={`/bus-first-last/#${stopPopoverData.number}`}
-                  target="_blank"
-                >
-                  {t('stop.firstLastBus')}{' '}
-                  <img
-                    src={openNewWindowImagePath}
-                    width="12"
-                    height="12"
-                    alt=""
-                    class="new-window"
-                  />
-                </a>
+             
               </h2>
               <BusServicesArrival
                 active={showStopPopover}
@@ -2852,20 +2845,7 @@ const App = () => {
             </ScrollableContainer>
             <div class="popover-footer">
               <div class="popover-buttons alt-hide">
-                <a
-                  href={`/bus-arrival/#${stopPopoverData.number}`}
-                  target="_blank"
-                  onClick={openBusArrival}
-                  class="popover-button primary"
-                >
-                  {t('glossary.busArrivals')}{' '}
-                  <img
-                    src={openNewWindowBlueImagePath}
-                    width="16"
-                    height="16"
-                    alt=""
-                  />
-                </a>
+             
                 {stopPopoverData.services.length > 1 && (
                   <a
                     href={`#/stops/${stopPopoverData.number}/routes`}

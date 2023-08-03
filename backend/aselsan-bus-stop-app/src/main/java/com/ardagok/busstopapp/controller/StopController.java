@@ -3,12 +3,13 @@ package com.ardagok.busstopapp.controller;
 
 import com.ardagok.busstopapp.entity.StopEntity;
 import com.ardagok.busstopapp.service.StopService;
-import com.ardagok.busstopapp.util.MapBoxUtils;
-import org.locationtech.jts.geom.Coordinate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin
 @RestController
@@ -24,12 +25,7 @@ public class StopController {
 
     @GetMapping
     public List<StopEntity> getBusStops() {
-
-       // String test = "ykgGwllyRbAfAoAfA{@L?fErKHt@c@L]AgMUyB_@kAiAcBeC_Bq@S}BUgG?A_HlG?|Cl@`B?v@MlBgAb@iA?}IYmBaAkB~BwAfFwAcAyDq@sAqCoCkCeBuB_AoHcBoJMEqFe@uBs@mAeg@{f@}@Ao@RaI|HqGqGcJnImYW{@t@u@lEsJyAeAvKMrIN~GrB`^AbCk@zEeAzD|EbB~FJhEpBkK~]s@bB{BhDxHtCa@fEkHdFoHnLwGkEyIlM?lBtK|GlJbDHbCYhBsFnLaGx^w@`DsDbKqEpHgCvCsOdO_{@vr@cGzG{H`PsTmI|CgFvg@wp@Ho@SiAkMqIoCX_l@x}@{FrKKx@^lAxDpBkAfCu@J";
-       // List<Coordinate> s = MapBoxUtils.decode(test, 5);
-
-         return stopService.getBusStops();
-
+        return stopService.getBusStops();
     }
 
     @GetMapping(path = "/min")
@@ -40,7 +36,6 @@ public class StopController {
     @PostMapping
     public void registerNewStop(@RequestBody StopEntity stopEntity) {
         stopService.addNewBusStops(stopEntity);
-
     }
 
     @GetMapping(path = "/{id}")

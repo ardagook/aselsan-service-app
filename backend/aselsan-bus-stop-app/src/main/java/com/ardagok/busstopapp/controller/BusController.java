@@ -28,13 +28,13 @@ public class BusController {
     @PostMapping
     public void registerNewBus(@RequestBody BusEntity busEntity) {
         busService.addNewBus(busEntity);
-
     }
 
     @GetMapping(path = "/min")
     public HashMap<String, HashMap<String, Object>> getBusesMin() {
         return busService.getBusesMin();
     }
+
     @GetMapping(path = "/routes")
     public HashMap<String, Object> getRoutesMin() {
         return busService.getRoutesMin();

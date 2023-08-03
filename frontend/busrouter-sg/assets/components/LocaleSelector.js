@@ -14,27 +14,11 @@ export default function LocaleSelector() {
         defaultValue={i18n.resolvedLanguage}
         
       >
-        <option value="tr">Türkçe</option>
-        <option value="en">English</option>
-        <option value="zh" lang="zh">
-          中文
-        </option>
-        <option value="ms" lang="ms">
-          Bahasa Melayu
-        </option>
-        <option value="ta" lang="ta">
-          தமிழ்
-        </option>
-        <option value="ja" lang="ja">
-          日本語
-        </option>
+        <option value="tr" lang='tr'>Türkçe</option>
+        <option value="en"lang='en'>English</option>
+   
       </select>{' '}
-      <a
-        href="https://github.com/cheeaun/busrouter-sg/discussions/54"
-        target="_blank"
-      >
-        <small>{t('about.helpTranslations')}</small>
-      </a>
+   
     </label>
   );
 }

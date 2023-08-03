@@ -1,6 +1,5 @@
 package com.ardagok.busstopapp.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -18,19 +17,11 @@ public class BusEntity {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "no",unique = true)
+    @Column(name = "no", unique = true)
     private String no;
 
     @Column(name = "name")
     private String name;
-
-    public Set<StopEntity> getBusStop() {
-        return busStop;
-    }
-
-    public void setBusStop(Set<StopEntity> busStop) {
-        this.busStop = busStop;
-    }
 
     @ManyToMany
     @JoinTable(
@@ -38,8 +29,6 @@ public class BusEntity {
             joinColumns = @JoinColumn(name = "bus_id"),
             inverseJoinColumns = @JoinColumn(name = "stop_id")
     )
-
-
     private Set<StopEntity> busStop;
 
     @ManyToMany
@@ -48,14 +37,9 @@ public class BusEntity {
             joinColumns = @JoinColumn(name = "bus_id"),
             inverseJoinColumns = @JoinColumn(name = "stop_id")
     )
-
-
     private Set<StopEntity> busStop2;
 
     @OneToMany(mappedBy = "bus")
     @JsonIgnore
     private Set<RouteEntity> routes;
-
-
-
 }

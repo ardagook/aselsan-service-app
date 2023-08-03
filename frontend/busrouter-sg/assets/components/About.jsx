@@ -33,35 +33,7 @@ export default function About() {
         <p>{t('app.description')}</p>
         <LocaleSelector />
         <hr />
-        <p>
-          <Trans i18nKey="about.disclaimerCopyright">
-            <a
-              href="https://github.com/cheeaun/busrouter-sg"
-              target="_blank"
-              rel="noopener"
-            >
-              Built
-            </a>
-            &
-            <a href="/visualization/" target="_blank" rel="noopener">
-              visualized
-            </a>
-            by
-            <a href="http://twitter.com/cheeaun" target="_blank" rel="noopener">
-              @cheeaun
-            </a>
-            . Data
-            <a
-              href="http://www.mytransport.sg/"
-              target="_blank"
-              rel="noopener"
-              title="Land Transport Authority"
-            >
-              &copy; LTA
-            </a>
-            .
-          </Trans>
-        </p>
+     
 
        
         <div class="popover-buttons">

@@ -5,10 +5,7 @@ import { initReactI18next } from 'react-i18next';
 // These locale JSON files will be *INCLUDED* in this bundle instead of an external fetch
 import en from '../i18n/en.json';
 import tr from '../i18n/tr.json';
-import ms from '../i18n/ms.json';
-import zh from '../i18n/zh.json';
-import ta from '../i18n/ta.json';
-import ja from '../i18n/ja.json';
+
 
 i18n
   .use(LanguageDetector)
@@ -18,10 +15,7 @@ i18n
     resources: {
       tr: { translation: tr },
       en: { translation: en },
-      ms: { translation: ms },
-      zh: { translation: zh },
-      ta: { translation: ta },
-      ja: { translation: ja },
+
     },
     fallbackLng: 'tr',
     debug: /localhost/i.test(location.hostname),

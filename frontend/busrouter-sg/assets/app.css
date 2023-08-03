@@ -164,8 +164,8 @@ a:active {
 }
 @supports (backdrop-filter: blur(10px)) {
   #about section {
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px) saturate(3);
+    background-color: rgb(85, 159, 255);;
+    /*backdrop-filter: blur(10px) saturate(3); */
   }
 }
 #about[hidden] section {
@@ -199,7 +199,7 @@ a:active {
 @supports (backdrop-filter: blur(10px)) {
   .popover {
     background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px) saturate(3);
+ /*   backdrop-filter: blur(10px) saturate(5); */
   }
 }
 
@@ -247,7 +247,7 @@ a:active {
   }
   #search-popover .popover-inner {
     background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px) saturate(3);
+    /*backdrop-filter: blur(10px) saturate(3); */
   }
 }
 
@@ -456,14 +456,14 @@ a:active {
   right: 5px;
 }
 #between-popover .between-services.full .start {
-  background-image: linear-gradient(to left, #972ffe, #1b2df0);
+  background-image: linear-gradient(to left, #0d1fee, #1b2df0);
   padding-right: 0;
 }
 #between-popover .between-services .end {
   padding-left: 2em;
   padding-bottom: 6px;
   right: 5px;
-  background-image: linear-gradient(to right, transparent 0%, #972ffe 30%);
+  background-image: linear-gradient(to right, transparent 0%, #1293ef 30%);
 }
 #between-popover .nearby-start .between-services .start:before,
 #between-popover .nearby-end .between-services .end:before {
@@ -506,7 +506,7 @@ a:active {
   margin-right: 24px;
 }
 #between-popover .between-stops:after {
-  border-color: #972ffe;
+  border-color: #00f1fd;
   margin-top: 4px;
   margin-left: 24px;
 }
@@ -746,7 +746,7 @@ a:active {
   margin-right: 1em;
 }
 .popover-list li a.current {
-  background-color: #5369b8;
+  background-color: #58abea;
   pointer-events: none;
 }
 
@@ -1129,7 +1129,7 @@ a.service-tag:hover {
 @supports (backdrop-filter: blur(10px)) {
   .float-pill {
     background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px) saturate(3);
+   /* backdrop-filter: blur(10px) saturate(3); */
   }
 }
 .float-pill .service-flex {
@@ -1280,7 +1280,7 @@ a.service-tag:hover {
 @supports (backdrop-filter: blur(10px)) {
   #tooltip {
     background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px) saturate(3);
+   /* backdrop-filter: blur(10px) saturate(3); */
   }
 }
 #tooltip.show {
@@ -1407,7 +1407,7 @@ a.service-tag:hover {
   }
 
   #search-popover .ads-li {
-    display: none;
+    display:none;
   }
   #search-popover .sidebar-ads {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -1802,6 +1802,7 @@ input[type='checkbox']:checked:after {
   border: 0;
   margin: 0 8px 0 0;
   padding: 5px;
+  
 }
 #locale-selector select:hover,
 #locale-selector select:active,

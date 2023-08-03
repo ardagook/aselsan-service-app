@@ -71,10 +71,8 @@ public class StopEntity implements Comparable<StopEntity> {
 
     @Override
     public int compareTo(StopEntity other) {
-
         return this.getNo().compareTo(other.getNo());
     }
-
 }
 
 
