@@ -12,10 +12,11 @@ const CACHE_TIME = 7 * 24 * 60; // 1 week
 const stopsFetch = fetchCache(stops3DJSONPath, CACHE_TIME);
 const routesFetch = fetchCache(routesJSONPath, CACHE_TIME);
 
-const lowerLat = 1.1,
-  upperLat = 1.58,
-  lowerLong = 103.49,
-  upperLong = 104.15;
+const lowerLat = 39.85,
+  upperLat = 40.15,
+  lowerLong = 32.52,
+  upperLong = 33.00;
+
 const map = new maplibregl.Map({
   container: 'map',
   // style: `mapbox://styles/uberdata/cjoqbbf6l9k302sl96tyvka09`,
@@ -26,6 +27,7 @@ const map = new maplibregl.Map({
   bounds: [lowerLong, lowerLat, upperLong, upperLat],
   attributionControl: false,
 });
+
 
 map.addControl(new maplibregl.NavigationControl(), 'bottom-right');
 map.addControl(

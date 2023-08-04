@@ -46,6 +46,8 @@ public class BusService {
             for (StopEntity entity3 : entity.getBusStop2()) {
                 stops2.add(entity3.getNo());
             }
+
+
             Collections.sort(stops);
             Collections.sort(stops2);
             Collections.reverse(stops2);

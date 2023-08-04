@@ -680,7 +680,7 @@ const App = () => {
     document.title = document.querySelector(
       'meta[property="og:title"]',
     ).content = Array.isArray(title) ? t(...title) : title;
-    if (!/^https?/.test(url)) url = 'https://busrouter.sg/#' + url;
+    if (!/^https?/.test(url)) url = 'localhost:8080/api/#' + url;
     document.querySelector('meta[property="og:url"]').content = url;
     document.querySelector('meta[name="description"]').content =
       document.querySelector('meta[property="og:description"]').content =
@@ -2724,8 +2724,8 @@ const App = () => {
             ref={servicesList}
             onScroll={handleServicesScroll}
           >
-             <li class="ads-li" hidden={!services.length || !showAd}>
-              {showAd && <Ad key="ad" />}
+            <li className="ads-li">
+              <img src="/images/aselsan-logo.png" alt="Reklam" />
             </li>
             {services.length
               ? (expandedSearchOnce ? services : services.slice(0, 25)).map(
