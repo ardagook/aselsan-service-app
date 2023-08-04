@@ -1,8 +1,10 @@
 package com.ardagok.busstopapp.controller;
 
 
+import com.ardagok.busstopapp.controller.handler.StopIdNotFoundException;
 import com.ardagok.busstopapp.entity.StopEntity;
 import com.ardagok.busstopapp.service.StopService;
+import org.locationtech.jts.geom.Point;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,8 +41,12 @@ public class StopController {
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<StopEntity> findStopById(@PathVariable long id) {
-        return stopService.findStopById(id);
+    public StopEntity findStopById(@PathVariable long id) {
+        return stopService.findStopById(id).orElseThrow(() -> new StopIdNotFoundException("Stop id: "+ id + " is not Found" ));
+    }
+    @GetMapping(path = "/dijkstra")
+    public LinkedList<Point> FindShortestStops(){
+        return stopService.getStopsDijkstra();
     }
 
 }

@@ -1,5 +1,6 @@
 package com.ardagok.busstopapp.controller;
 
+import com.ardagok.busstopapp.controller.handler.BusIdNotFoundException;
 import com.ardagok.busstopapp.entity.BusEntity;
 import com.ardagok.busstopapp.service.BusService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,8 +42,8 @@ public class BusController {
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<BusEntity> getBusById(@PathVariable Long id) {
-        return busService.getBusById(id);
+    public BusEntity getBusById(@PathVariable Long id) {
+        return busService.getBusById(id).orElseThrow(() -> new BusIdNotFoundException("Bus id "+id+" does not found"));
     }
 
 }
