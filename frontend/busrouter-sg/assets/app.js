@@ -38,7 +38,7 @@ import busTinyImagePath from './images/bus-tiny.png';
 
 const dataPath = 'http://localhost:8080/api/';
 const routesJSONPath = dataPath + 'buses/routes';
-const stopsJSONPath =  dataPath+'bus/stops/min';
+const stopsJSONPath =  dataPath+'stops/min';
 const servicesJSONPath =  dataPath+'buses/min';
 
 const $map = document.getElementById('map');
@@ -95,10 +95,10 @@ window.requestIdleCallback =
   window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
 
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
-const lowerLat = 1.2,
-  upperLat = 1.48,
-  lowerLong = 103.59,
-  upperLong = 104.05;
+const lowerLat = 39.8334,
+  upperLat = 40.0334,
+  lowerLong = 32.7597,
+  upperLong = 33.0597;
 const CACHE_TIME = 24 * 60; // 1 day
 let map;
 let servicesDataArr = [];

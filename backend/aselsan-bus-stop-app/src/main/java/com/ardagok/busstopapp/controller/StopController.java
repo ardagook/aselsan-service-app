@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @CrossOrigin
 @RestController
-@RequestMapping(path = "/api/bus/stops", produces = "application/json")
+@RequestMapping(path = "/api/stops", produces = "application/json")
 public class StopController {
 
     @Autowired

@@ -21,39 +21,18 @@ import static jakarta.persistence.GenerationType.SEQUENCE;
 @Table(name = "stop_entity")
 public class StopEntity implements Comparable<StopEntity> {
     @Id
-    @SequenceGenerator(
-            name = "stop_sequence",
-            sequenceName = "stop_sequence",
-            allocationSize = 1,
-            initialValue = 1000
+    @SequenceGenerator(name = "stop_sequence", sequenceName = "stop_sequence", allocationSize = 1, initialValue = 1000
 
     )
-    @GeneratedValue(
-            strategy = SEQUENCE,
-            generator = "stop_sequence"
-    )
-
-    @Column(
-            name = "id",
-            updatable = false
-
-
-    )
+    @GeneratedValue(strategy = SEQUENCE, generator = "stop_sequence")
+    @Column(name = "id", updatable = false)
     private int id;
-    @Column(
-            name = "no",
-            columnDefinition = "Text",
-            unique = true
-    )
+
+    @Column(name = "no", columnDefinition = "Text", unique = true)
     private String no;
 
-    @Column(
-            name = "stop_name",
-            columnDefinition = "Text"
-
-    )
+    @Column(name = "stop_name", columnDefinition = "Text")
     private String stopName;
-
 
     @JsonSerialize(using = GeometrySerializer.class)
     @JsonDeserialize(using = GeometryDeserializer.class)
@@ -62,16 +41,14 @@ public class StopEntity implements Comparable<StopEntity> {
 
     @JsonBackReference
     @ManyToMany(mappedBy = "busStop")
-
     Set<BusEntity> busList;
+
     @JsonBackReference
     @ManyToMany(mappedBy = "busStop2")
-
     Set<BusEntity> busList2;
 
     @Override
     public int compareTo(StopEntity other) {
-
         return this.getNo().compareTo(other.getNo());
     }
 

@@ -37,7 +37,6 @@ public class BusService {
         for (BusEntity entity : busRepository.findAll()) {
             HashMap<String, Object> busData = new HashMap<>();
             busData.put("name", entity.getName());
-
             List<String> stops = new LinkedList<>();
             for (StopEntity entity2 : entity.getBusStop()) {
                 stops.add(entity2.getNo());
@@ -46,8 +45,6 @@ public class BusService {
             for (StopEntity entity3 : entity.getBusStop2()) {
                 stops2.add(entity3.getNo());
             }
-
-
             Collections.sort(stops);
             Collections.sort(stops2);
             Collections.reverse(stops2);
