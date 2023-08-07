@@ -1,5 +1,7 @@
 package com.ardagok.busstopapp.controller.handler;
 
+import com.ardagok.busstopapp.Exception.BusIdNotFoundException;
+import com.ardagok.busstopapp.Exception.StopIdNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

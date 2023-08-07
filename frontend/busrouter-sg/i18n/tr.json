@@ -61,11 +61,11 @@
       "passingRoutes_plural": "{{count}} Otobüs "
     },
     "multiRoute": {
-      "addRoute": "Add another bus route",
-      "showingServices": "Showing {{count}} service",
-      "showingServices_plural": "Showing {{count}} services",
-      "intersectingStops": "{{count}} intersecting stop",
-      "intersectingStops_plural": "{{count}} intersecting stops"
+      "addRoute": "Başka otobüs ekle",
+      "showingServices": " {{count}} servis",
+      "showingServices_plural": " {{count}} servis",
+      "intersectingStops": "{{count}} durak kesişti.",
+      "intersectingStops_plural": "{{count}} durak kesişti. "
     },
     "arrivals": {
       "invalidBusStopCode": "Yanlış numaralı servis durağı.",

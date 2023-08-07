@@ -1,14 +1,15 @@
 package com.ardagok.busstopapp.controller;
 
-import com.ardagok.busstopapp.controller.handler.BusIdNotFoundException;
+import com.ardagok.busstopapp.Exception.BusIdNotFoundException;
 import com.ardagok.busstopapp.entity.BusEntity;
 import com.ardagok.busstopapp.service.BusService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
 
 @CrossOrigin
 @RestController
@@ -46,4 +47,6 @@ public class BusController {
         return busService.getBusById(id).orElseThrow(() -> new BusIdNotFoundException("Bus id "+id+" does not found"));
     }
 
+
 }
+

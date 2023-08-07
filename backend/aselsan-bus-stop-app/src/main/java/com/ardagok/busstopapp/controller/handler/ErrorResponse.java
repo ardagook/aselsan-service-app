@@ -9,11 +9,11 @@ import java.util.List;
 @Setter
 
 public class ErrorResponse {
-    private String message;
-    private List<String> details;
-    public ErrorResponse(String message, List<String> details) {
+    private String kod;
+    private List<String> message;
+    public ErrorResponse(String kod, List<String> message) {
         super();
+        this.kod = kod;
         this.message = message;
-        this.details = details;
     }
 }
