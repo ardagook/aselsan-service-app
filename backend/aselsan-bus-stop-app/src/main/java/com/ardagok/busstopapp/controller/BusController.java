@@ -1,15 +1,13 @@
 package com.ardagok.busstopapp.controller;
 
-import com.ardagok.busstopapp.Exception.BusIdNotFoundException;
+import com.ardagok.busstopapp.exception.BusIdNotFoundException;
 import com.ardagok.busstopapp.entity.BusEntity;
 import com.ardagok.busstopapp.service.BusService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @CrossOrigin
 @RestController
@@ -33,18 +31,18 @@ public class BusController {
     }
 
     @GetMapping(path = "/min")
-    public HashMap<String, HashMap<String, Object>> getBusesMin() {
+    public Map<String, Map<String, Object>> getBusesMin() {
         return busService.getBusesMin();
     }
 
     @GetMapping(path = "/routes")
-    public HashMap<String, Object> getRoutesMin() {
+    public Map<String, Object> getRoutesMin() {
         return busService.getRoutesMin();
     }
 
     @GetMapping(path = "/{id}")
     public BusEntity getBusById(@PathVariable Long id) {
-        return busService.getBusById(id).orElseThrow(() -> new BusIdNotFoundException("Bus id "+id+" does not found"));
+        return busService.getBusById(id).orElseThrow(() -> new BusIdNotFoundException("Bus id " + id + " does not found"));
     }
 
 

@@ -2,10 +2,8 @@ package com.ardagok.busstopapp.controller;
 
 import com.ardagok.busstopapp.entity.BusEntity;
 import com.ardagok.busstopapp.service.BusService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -26,13 +24,9 @@ class BusControllerTest {
     @MockBean
     private BusService busService;
 
-    @Autowired
-    private ObjectMapper objectMapper;
-
-
     @Test
-    public void testGetBusById_ExistingId() throws Exception {
-        long busId = (int)1L;
+     void testGetBusByIdExistingId() throws Exception {
+        long busId = (int) 1L;
         BusEntity mockBus = new BusEntity();
         mockBus.setId((int) busId);
 
@@ -42,9 +36,10 @@ class BusControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(busId));
     }
+
     @Test
-    public void testGetBusById_NonExistingId() throws Exception {
-        long nonExistingBusId = (int)999L;
+     void testGetBusByIdNonExistingId() throws Exception {
+        long nonExistingBusId = (int) 999L;
         when(busService.getBusById(nonExistingBusId)).thenReturn(Optional.empty());
 
         mockMvc.perform(MockMvcRequestBuilders.get("/api/buses/{id}", nonExistingBusId))

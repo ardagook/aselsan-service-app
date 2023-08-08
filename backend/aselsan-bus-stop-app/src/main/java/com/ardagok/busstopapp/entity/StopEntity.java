@@ -3,7 +3,6 @@ package com.ardagok.busstopapp.entity;
 import com.bedatadriven.jackson.datatype.jts.serialization.GeometryDeserializer;
 import com.bedatadriven.jackson.datatype.jts.serialization.GeometrySerializer;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
@@ -20,11 +19,9 @@ import static jakarta.persistence.GenerationType.SEQUENCE;
 
 @Entity
 @Table(name = "stop_entity")
-public class StopEntity implements Comparable<StopEntity> {
+public class StopEntity {
     @Id
-    @SequenceGenerator(name = "stop_sequence", sequenceName = "stop_sequence", allocationSize = 1, initialValue = 1000
-
-    )
+    @SequenceGenerator(name = "stop_sequence", sequenceName = "stop_sequence", allocationSize = 1, initialValue = 1000)
     @GeneratedValue(strategy = SEQUENCE, generator = "stop_sequence")
     @Column(name = "id", updatable = false)
     private int id;
@@ -48,10 +45,6 @@ public class StopEntity implements Comparable<StopEntity> {
     @ManyToMany(mappedBy = "busStop2")
     Set<BusEntity> busList2;
 
-    @Override
-    public int compareTo(StopEntity other) {
-        return this.getNo().compareTo(other.getNo());
-    }
 
 }
 

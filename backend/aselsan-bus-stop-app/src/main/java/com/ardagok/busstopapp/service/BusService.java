@@ -32,8 +32,8 @@ public class BusService {
         return busRepository.findById(id);
     }
 
-    public HashMap<String, HashMap<String, Object>> getBusesMin() {
-        HashMap<String, HashMap<String, Object>> busMinHashMap = new HashMap<>();
+    public Map<String, Map<String, Object>> getBusesMin() {
+        Map<String, Map<String, Object>> busMinHashMap = new HashMap<>();
         for (BusEntity entity : busRepository.findAll()) {
             HashMap<String, Object> busData = new HashMap<>();
             busData.put("name", entity.getName());
@@ -59,10 +59,11 @@ public class BusService {
         return busMinHashMap;
     }
 
-    public HashMap<String, Object> getRoutesMin() {
-        HashMap<String, Object> routesMin = new HashMap<>();
+    public Map<String, Object> getRoutesMin() {
+        Map<String, Object> routesMin = new HashMap<>();
         for (BusEntity entity : busRepository.findAll()) {
-            LinkedList<String> routes = new LinkedList();
+            List<String> routes = new LinkedList<>() {
+            };
             for (RouteEntity entity2 : entity.getRoutes()) {
                 routes.add(MapBoxUtils.encode(List.of(entity2.getLineString().getCoordinates()), 5));
             }

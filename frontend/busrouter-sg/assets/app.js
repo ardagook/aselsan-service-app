@@ -36,7 +36,7 @@ import passingRoutesBlueImagePath from './images/passing-routes-blue.svg';
 import iconSVGPath from '../icons/icon.svg';
 import busTinyImagePath from './images/bus-tiny.png';
 
-const dataPath = 'http://localhost:8080/api/';
+const dataPath = 'http://localhost:8181/api/';
 const routesJSONPath = dataPath + 'buses/routes';
 const stopsJSONPath =  dataPath+'stops/min';
 const servicesJSONPath =  dataPath+'buses/min';
@@ -60,7 +60,7 @@ const redirectToOldSite = () => {
   const redirect = confirm(
     'Sanırım senin uygulaman farklı bir versiyona yönlendirdi.',
   );
-  if (redirect) location.href = 'https://localhost:8080/api';
+  if (redirect) location.href = 'https://localhost:8181/api';
 };
 
 if (!supportsPromise || !mapboxgl.supported()) {
@@ -680,7 +680,7 @@ const App = () => {
     document.title = document.querySelector(
       'meta[property="og:title"]',
     ).content = Array.isArray(title) ? t(...title) : title;
-    if (!/^https?/.test(url)) url = 'localhost:8080/api/#' + url;
+    if (!/^https?/.test(url)) url = 'localhost:8181/api/#' + url;
     document.querySelector('meta[property="og:url"]').content = url;
     document.querySelector('meta[name="description"]').content =
       document.querySelector('meta[property="og:description"]').content =

@@ -4,10 +4,8 @@ import com.ardagok.busstopapp.entity.StopEntity;
 import com.ardagok.busstopapp.repository.StopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Optional;
+
+import java.util.*;
 
 @Service
 public class StopService {
@@ -30,12 +28,11 @@ public class StopService {
         return stopRepository.findById(id);
     }
 
-    public HashMap<String, LinkedList> getStopsMin() {
-        HashMap<String, LinkedList> stopsMinHashMap = new HashMap<>();
+    public Map<String, List<Object>> getStopsMin() {
+        Map<String, List<Object>> stopsMinHashMap = new HashMap<>();
         for (StopEntity entity : stopRepository.findAll()) {
-            LinkedList arrayList = new LinkedList();
+            List<Object> arrayList = new ArrayList<>();
             arrayList.add(entity.getPoint().getX());
-            System.out.println(entity.getPoint());
             arrayList.add(entity.getPoint().getY());
             arrayList.add(entity.getStopName());
             stopsMinHashMap.put(String.valueOf(entity.getNo()), arrayList);

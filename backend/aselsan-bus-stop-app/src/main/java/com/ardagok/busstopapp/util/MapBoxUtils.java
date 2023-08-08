@@ -2,7 +2,6 @@ package com.ardagok.busstopapp.util;
 
 import lombok.experimental.UtilityClass;
 import org.locationtech.jts.geom.Coordinate;
-import org.springframework.context.annotation.Bean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +64,7 @@ public final class MapBoxUtils {
         long lastLat = 0;
         long lastLng = 0;
 
-        final StringBuffer result = new StringBuffer();
+        final StringBuilder result = new StringBuilder();
 
         // OSRM uses precision=6, the default Polyline spec divides by 1E5, capping at precision=5
         double factor = Math.pow(10, precision);
@@ -87,7 +86,7 @@ public final class MapBoxUtils {
         return result.toString();
     }
 
-    private static void encode(long variable, StringBuffer result) {
+    private static void encode(long variable, StringBuilder result) {
         variable = variable < 0 ? ~(variable << 1) : variable << 1;
         while (variable >= 0x20) {
             result.append(Character.toChars((int) ((0x20 | (variable & 0x1f)) + 63)));
