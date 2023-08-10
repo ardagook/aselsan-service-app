@@ -16,10 +16,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
                 contact = @Contact(
                         name = "Arda Gök",
                         email = "ardagook7@gmail.com"
-                ),
-                license = @License(
-                        name = "License",
-                        url = "ardagook"
                 )
         )
 )
